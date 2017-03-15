@@ -10,3 +10,6 @@ I may post some coding related stuff here in the future too!
 ## TODO
 * HTTPS
 * More interactivity
+
+### Resources used
+* [Normalize.css](https://necolas.github.io/normalize.css/)

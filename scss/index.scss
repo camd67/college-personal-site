@@ -14,6 +14,16 @@ body {
 }
 h1, p, ul {
     margin: 0;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    color: $lightAccent;
+
+    &:hover {
+        text-decoration: underline;
+        color: darken($lightAccent, 35);
+    }
 }
 
 .navbar {
@@ -33,9 +43,12 @@ h1, p, ul {
         padding-right: 1em;
         text-align: left;
 
-        &:first-child{
+        &:first-child {
             position: absolute;
             left: 1em;
+        }
+        .top-link-large {
+            display: none;
         }
     }
 }
@@ -65,14 +78,50 @@ section {
 }
 
 footer {
-    height: 2em;
+    min-height: 2em;
+    overflow: auto;
     background-color: $primaryBack;
     padding: 1em;
+    color: #CCC;
 
+    .footer-left {
+        margin-bottom: 0.5em;
+        float: left;
+    }
     .footer-right {
         float: right;
+        p {            
+            margin-bottom: 1em;
+        }
+        div {
+            line-height: 25px;
+        }
     }
-    .footer-left {
-        float: left;
+}
+
+@media screen and (min-width: 720px) {
+    .navbar {
+        li {
+            .top-link-small {
+                display: none;
+            }
+            .top-link-large {
+                display: inline;
+            }
+        }
+    }
+
+    footer {
+        .footer-left {
+            margin-bottom: 0;
+        }
+        .footer-right {
+            p {            
+                margin-bottom: 0;
+            }
+            div {
+                line-height: 25px;
+            }
+        }
     }
 }

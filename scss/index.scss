@@ -25,6 +25,13 @@ a {
         color: darken($lightAccent, 35);
     }
 }
+.container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+}
+
 
 .navbar {
     width: 100%;
@@ -56,9 +63,11 @@ a {
 header {
     background-color: $lightBack;
     min-height: $sectionHeight;
+    padding-top: 3.5em;
+
     .section-header {
         text-align: center;
-        padding-top: 2.5em;
+        margin-bottom: 1em;
     }
 }
 

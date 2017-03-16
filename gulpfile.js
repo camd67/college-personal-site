@@ -70,6 +70,12 @@ gulp.task("copyDev", function() {
     gulp.src("res/**")
         .pipe(gulp.dest(devOut + "res"))
         .pipe(connect.reload());
+    gulp.src(["*.*",
+            "!gulpfile.js",
+            "!package.json",
+            "!README.md"])
+        .pipe(gulp.dest(devOut))
+        .pipe(connect.reload());
 });
 
 gulp.task("default", ["sassDev", "watch", "copyDev", "connect"]);

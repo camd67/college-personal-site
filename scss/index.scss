@@ -43,6 +43,10 @@ h1, p, ul {
 header {
     background-color: $lightBack;
     min-height: $sectionHeight;
+    .section-header {
+        text-align: center;
+        padding-top: 2.5em;
+    }
 }
 
 section {    
@@ -57,5 +61,18 @@ section {
     }
     &:nth-child(odd) {
         background-color: $darkAccent;
+    }
+}
+
+footer {
+    height: 2em;
+    background-color: $primaryBack;
+    padding: 1em;
+
+    .footer-right {
+        float: right;
+    }
+    .footer-left {
+        float: left;
     }
 }

@@ -1,5 +1,61 @@
+/* Coolors Exported Palette - coolors.co/daff7d-b2ef9b-8c86aa-81559b-7e3f8f */
+$lightAccent: rgba(218, 255, 125, 1);
+$darkAccent: rgba(178, 239, 155, 1);
+$lightBack: rgba(140, 134, 170, 1);
+$primaryBack: rgba(129, 85, 155, 1);
+$darkBack: rgba(126, 63, 143, 1);
+
+$sectionHeight: 15em;
+
 body {
     font-size: 12pt;
     font-family: "Titillium Web", sans-serif;
     font-weight: 300;
+}
+h1, p, ul {
+    margin: 0;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    text-align: right;
+    font-weight: 300;
+    font-size: 16pt;
+    background-color: $primaryBack;
+    padding: 0.5em;
+    
+    li {
+        display: inline;
+        list-style: none;
+        padding-right: 1em;
+        text-align: left;
+
+        &:first-child{
+            position: absolute;
+            left: 1em;
+        }
+    }
+}
+
+header {
+    background-color: $lightBack;
+    min-height: $sectionHeight;
+}
+
+section {    
+    min-height: $sectionHeight;
+
+    .section-header {
+        text-align: center;
+        padding-top: 1.5em;
+    }
+    &:nth-child(even) {
+        background-color: $lightBack;
+    }
+    &:nth-child(odd) {
+        background-color: $darkAccent;
+    }
 }

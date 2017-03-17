@@ -32,9 +32,13 @@ a {
     padding-bottom: 1em;
 }
 
-.carousel {
-    img {
-        width: 100%;
+.card {
+    text-align: center;
+
+    .carousel {
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -115,6 +119,14 @@ footer {
 }
 
 @media screen and (min-width: 720px) {
+    .card {
+        .carousel {
+            img {
+                width: 50%;                
+            }
+        }
+    }
+
     .navbar {
         li {
             .top-link-small {

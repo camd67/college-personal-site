@@ -57,6 +57,12 @@ gulp.task("copyDist", function() {
     gulp.src("res/*")
         .pipe(imagemin())
         .pipe(gulp.dest(distOut + "res"));
+    gulp.src(["*.*",
+            "!gulpfile.js",
+            "!package.json",
+            "!README.md"])
+        .pipe(gulp.dest(distOut))
+        .pipe(connect.reload());
 });
 
 gulp.task("copyDev", function() {

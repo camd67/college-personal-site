@@ -31,6 +31,25 @@ a {
     margin-right: auto;
     padding-bottom: 1em;
 }
+.notification-banner {
+    position: fixed;
+    top: -15px;
+    background-color: $darkAccent;
+    color: $darkBack;
+    border-radius: 15px;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    z-index: 101;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: 400;
+    height: 2em;
+    padding-top: 1em;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 .card {
     text-align: center;

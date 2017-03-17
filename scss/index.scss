@@ -26,12 +26,17 @@ a {
     }
 }
 .container {
-    width: 75%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 1em;
 }
 
+.carousel {
+    img {
+        width: 100%;
+    }
+}
 
 .navbar {
     width: 100%;
@@ -64,6 +69,7 @@ header {
     background-color: $lightBack;
     min-height: $sectionHeight;
     padding-top: 3.5em;
+    text-align: center;
 
     .section-header {
         text-align: center;

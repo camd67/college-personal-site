@@ -4,6 +4,7 @@ var sass = require("gulp-sass");
 var sourcemaps = require("gulp-sourcemaps");
 var uglify = require("gulp-uglify");
 var clean = require("gulp-clean");
+var imagemin = require("gulp-imagemin");
 
 var devOut = "dev/";
 var distOut = "dist/";
@@ -54,6 +55,7 @@ gulp.task("copyDist", function() {
     gulp.src("html/*")
         .pipe(gulp.dest(distOut + "html"));
     gulp.src("res/*")
+        .pipe(imagemin())
         .pipe(gulp.dest(distOut + "res"));
 });
 

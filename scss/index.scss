@@ -49,6 +49,8 @@ a {
     transform: translateX(-50%);
 }
 .card {
+    margin-bottom: 2em;
+
     .card-header {
         text-align: center;
     }
@@ -68,6 +70,10 @@ a {
         .card-text {
             padding: 0.5em;
             flex: 1 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
             .card-link {
                 font-size: 18pt;

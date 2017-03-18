@@ -13,3 +13,4 @@ I may post some coding related stuff here in the future too!
 
 ### Resources used
 * [Normalize.css](https://necolas.github.io/normalize.css/)
+* [jQuery](https://jquery.com/)

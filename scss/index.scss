@@ -140,6 +140,7 @@ section {
 }
 
 #school {
+    text-align: center;
     img {
         display: block;
         margin-left: auto;
@@ -147,11 +148,25 @@ section {
         width: 25%;
         padding-bottom: 1.5em;
     }
-    p {
-        text-align: center;
-        font-size: 14pt;
-        a {
-            color: $primary;
+    .text-description {
+        display: inline-block;
+        text-align: left;
+
+        li {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 1em;
+            text-indent: -1em;
+
+            &::before {
+                content: "\2713\a0";
+            }
+        }
+        p {
+            font-size: 14pt;
+            a {
+                color: $primary;
+            }
         }
     }
 }
@@ -164,9 +179,16 @@ section {
         text-align: center;
         display: block;
         margin-bottom: 2em;
+        width: 10em;
+        margin-left: auto;
+        margin-right: auto;
 
+        &:hover {
+            text-decoration: none;
+            border-bottom: 1px solid #FFF;
+        }
         img {
-            width: 8em;
+            width: 2em;
         }
     }
 }

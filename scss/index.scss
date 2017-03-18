@@ -1,14 +1,13 @@
-/* Coolors Exported Palette - coolors.co/daff7d-b2ef9b-8c86aa-81559b-7e3f8f */
-$lightAccent: rgba(218, 255, 125, 1);
-$darkAccent: rgba(178, 239, 155, 1);
-$lightBack: rgba(140, 134, 170, 1);
-$primaryBack: rgba(129, 85, 155, 1);
-$darkBack: rgba(126, 63, 143, 1);
+$lightAccent: rgba(220, 220, 221, 1);
+$darkAccent: rgba(197, 195, 198, 1);
+$lightBack: rgba(70, 73, 76, 1);
+$darkBack: rgba(76, 92, 104, 1);
+$primary: rgba(25, 133, 161, 1);
 
 $sectionHeight: 15em;
 
 body {
-    font-size: 12pt;
+    font-size: 14pt;
     font-family: "Titillium Web", sans-serif;
     font-weight: 300;
 }
@@ -17,12 +16,11 @@ h1, p, ul {
     font-weight: normal;
 }
 a {
-    text-decoration: none;
     color: $lightAccent;
 
     &:hover {
         text-decoration: underline;
-        color: darken($lightAccent, 35);
+        color: darken($lightAccent, 25);
     }
 }
 .container {
@@ -35,7 +33,7 @@ a {
     position: fixed;
     top: -15px;
     background-color: $darkAccent;
-    color: $darkBack;
+    color: $primary;
     border-radius: 15px;
     border-bottom: 2px solid #000;
     border-left: 2px solid #000;
@@ -44,23 +42,45 @@ a {
     text-align: center;
     font-size: 18pt;
     font-weight: 400;
-    height: 2em;
     padding-top: 1em;
+    padding-bottom: 0.5em;
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
 }
-
 .card {
-    text-align: center;
+    .card-header {
+        text-align: center;
+    }
 
-    .carousel {
-        img {
-            width: 100%;
+    .card-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .carousel {
+            flex: 1 1;
+            img {
+                max-width: 100%;
+                border-radius: 5px;
+            }
+        }
+        .card-text {
+            padding: 0.5em;
+            flex: 1 1;
+
+            .card-link {
+                font-size: 18pt;
+                text-align: center;
+                margin-top: 25px;
+
+                a {
+                    color: $primary;
+                }
+            }
         }
     }
 }
-
 .navbar {
     width: 100%;
     position: fixed;
@@ -69,7 +89,7 @@ a {
     text-align: right;
     font-weight: 300;
     font-size: 16pt;
-    background-color: $primaryBack;
+    background-color: $darkBack;
     padding: 0.5em;
     
     li {
@@ -89,7 +109,7 @@ a {
 }
 
 header {
-    background-color: $lightBack;
+    background-color: $darkAccent;
     min-height: $sectionHeight;
     padding-top: 3.5em;
     text-align: center;
@@ -102,23 +122,59 @@ header {
 
 section {    
     min-height: $sectionHeight;
+    padding-bottom: 1em;
 
     .section-header {
         text-align: center;
-        padding-top: 1.5em;
+        padding-top: 0.5em;
+        margin-bottom: 1em;
     }
     &:nth-child(even) {
         background-color: $lightBack;
+        color: $lightAccent;
     }
     &:nth-child(odd) {
         background-color: $darkAccent;
+        color: $lightBack;
+    }
+}
+
+#school {
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+        padding-bottom: 1.5em;
+    }
+    p {
+        text-align: center;
+        font-size: 14pt;
+        a {
+            color: $primary;
+        }
+    }
+}
+
+#links {
+    h1 {
+        margin-bottom: 1em;
+    }
+    a {
+        text-align: center;
+        display: block;
+        margin-bottom: 2em;
+
+        img {
+            width: 8em;
+        }
     }
 }
 
 footer {
     min-height: 2em;
     overflow: auto;
-    background-color: $primaryBack;
+    background-color: $darkBack;
     padding: 1em;
     color: #CCC;
 
@@ -138,14 +194,12 @@ footer {
 }
 
 @media screen and (min-width: 720px) {
-    .card {
-        .carousel {
-            img {
-                width: 50%;                
-            }
-        }
+    .container {
+        width: 75%;
     }
-
+    a {
+        text-decoration: none;
+    }
     .navbar {
         li {
             .top-link-small {

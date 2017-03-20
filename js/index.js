@@ -52,7 +52,7 @@ $(function(){
 
     function displayCarousel(carousel){
         var currentImage = carousel.data("carouselCurrent");
-        var children = carousel.children("img");        
+        var children = carousel.children("img");
         for(var i = 0; i < children.length; i++){
             if(i === currentImage){
                 children.eq(i).show();
@@ -66,7 +66,7 @@ $(function(){
     setTimeout(function(){
         // really just an obtuse way to fool/annoy web scrapers going through both HTML and JS
         var first = "Om90bGlhbQ==";
-        var second = "bm9yZW1hYw==";
+        var second = "Lm5vcmVtYWM=";
         var third = "ZW5hb2Q=";
         var fourth = "bW9jLmxpYW1nQA==";
 

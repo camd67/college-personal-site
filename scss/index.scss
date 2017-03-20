@@ -165,11 +165,11 @@ section {
         padding-top: 0.5em;
         margin-bottom: 1em;
     }
-    &:nth-child(even) {
+    &:nth-child(odd) {
         background-color: $lightBack;
         color: $lightAccent;
     }
-    &:nth-child(odd) {
+    &:nth-child(even) {
         background-color: $darkAccent;
         color: $lightBack;
     }

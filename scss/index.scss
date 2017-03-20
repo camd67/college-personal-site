@@ -67,9 +67,27 @@ a {
 
         .carousel {
             flex: 1 1;
+            position: relative;
             img {
-                max-width: 100%;
+                width: 100%;
                 border-radius: 5px;
+                display: none;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+            .carousel-next {
+                font-size: 1.5em;
+                left: 0;
+                right: 0;
+                position: absolute;
+                background-color: rgba(10, 10, 10, 0.75);
+                bottom: 0;
+                text-align: center;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
         .card-text {
@@ -108,6 +126,13 @@ a {
         list-style: none;
         padding-right: 1em;
         text-align: left;
+        color: $lightAccent;
+
+        &:hover {
+            text-decoration: underline;
+            color: darken($lightAccent, 25);
+            cursor: pointer;
+        }
 
         &:first-child {
             position: absolute;
@@ -254,6 +279,10 @@ footer {
             
             &.card-reverse {
                 flex-direction: row-reverse;
+            }
+
+            .carousel-last, .carousel-next {
+                display: none;
             }
         }
     }

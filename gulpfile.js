@@ -54,6 +54,8 @@ gulp.task("copyDist", function() {
         .pipe(gulp.dest(distOut));    
     gulp.src("html/*")
         .pipe(gulp.dest(distOut + "html"));
+    gulp.src("articles/*")
+        .pipe(gulp.dest(distOut + "articles"));
     gulp.src("res/*")
         .pipe(imagemin())
         .pipe(gulp.dest(distOut + "res"));
@@ -74,6 +76,9 @@ gulp.task("copyDev", function() {
         .pipe(connect.reload());
     gulp.src("html/**")
         .pipe(gulp.dest(devOut + "html"))
+        .pipe(connect.reload());
+    gulp.src("articles/*")
+        .pipe(gulp.dest(devOut + "articles"))
         .pipe(connect.reload());
     gulp.src("res/**")
         .pipe(gulp.dest(devOut + "res"))

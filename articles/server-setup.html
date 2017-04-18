@@ -20,13 +20,7 @@
         <link rel="stylesheet" href="/css/index.css">
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400" rel="stylesheet">
 
-        <!--[if lt IE 9]>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
-        <![endif]-->
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/lib/jquery-3.1.1.js"><\/script>')</script>
         <script src="/js/index.js"></script>
     </head>
     <body>
@@ -47,10 +41,46 @@
             <div class="container">
                 <h1 class="section-header">Server setup on Linux using NGINX</h1>
                 <p>
-                    Server setup
+                    This article will go through how I setup my servers using NGINX and various other technologies.
+                    This is mainly written for my reference, although I've written it such that anyone should be able to gather some information about it.
+                </p>
+                <p>
+                    One important thing I'll say about the following is that the best way to learn about the following technologies is to explore the official documentation.
+                    Of course, if the offical docs fail to explain the technology sufficiently, resources like this page can help out.
                 </p>
             </div>
         </header>
+        <article>
+            <section>
+                <h2>Architecture Overview</h2>
+                <p>
+                    The technologies used in my servers are the following:
+                    <ul>
+                        <li><span class="bold">Reverse proxy / static file serving:</span> <a href="#reverse-proxy" class="tech-list-link">NGINX</a></li>
+                        <li><span class="bold">Web server:</span> <a href="#web-server" class="tech-list-link">C# with ASP .NET Core</a></li>
+                        <li><span class="bold">Security:</span> <a href="#security" class="tech-list-link">SSH, Fail2Ban, UFW</a></li>
+                    </ul>
+                </p>
+            </section>
+            <section id="reverse-proxy">
+                <h2>Using and configuring NGINX</h2>
+                <p>
+
+                </p>
+            </section>
+            <section id="web-server">
+                <h2>Running code on the server</h2>
+                <p>
+
+                </p>
+            </section>
+            <section id="security">
+                <h2>Securing the server</h2>
+                <p>
+
+                </p>
+            </section>
+        </article>
         <footer>
             <p class="footer-content">Site created by Cameron Doane</p>
             <p class="footer-content">Source code on <a href="https://github.com/camd67/personal-site">my Github</a></p>

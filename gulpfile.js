@@ -52,11 +52,11 @@ gulp.task("sassDist", function() {
 gulp.task("copyDist", function() {
     gulp.src("index.html")
         .pipe(gulp.dest(distOut));    
-    gulp.src("html/*")
+    gulp.src("html/**")
         .pipe(gulp.dest(distOut + "html"));
-    gulp.src("articles/*")
+    gulp.src("articles/**")
         .pipe(gulp.dest(distOut + "articles"));
-    gulp.src("res/*")
+    gulp.src("res/**")
         .pipe(imagemin())
         .pipe(gulp.dest(distOut + "res"));
     gulp.src(["*.*",
@@ -77,7 +77,7 @@ gulp.task("copyDev", function() {
     gulp.src("html/**")
         .pipe(gulp.dest(devOut + "html"))
         .pipe(connect.reload());
-    gulp.src("articles/*")
+    gulp.src("articles/**")
         .pipe(gulp.dest(devOut + "articles"))
         .pipe(connect.reload());
     gulp.src("res/**")
